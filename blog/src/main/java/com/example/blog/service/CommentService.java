@@ -24,10 +24,12 @@ public class CommentService {
         this.postRepo = postRepo;
     }
 
+    @Transactional(readOnly = true)
     public List<Comment> listByPostSlug(String postSlug){
         Post post = postRepo.findBySlug(postSlug).orElseThrow(() -> new NotFoundException("Post não encontrado"));
         // Lazy-safe dentro da transação
-        return post.getComments();
+        //return post.getComments();
+        return commentRepo.findByPostSlug(postSlug);
     }
 
     @Transactional

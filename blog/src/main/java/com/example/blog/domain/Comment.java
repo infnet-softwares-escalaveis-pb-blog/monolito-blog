@@ -1,5 +1,6 @@
 package com.example.blog.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
@@ -20,6 +21,7 @@ public class Comment {
     private Long id;
 
     @ManyToOne(optional = false)
+    @JsonIgnore
     private Post post;
 
     @NotBlank

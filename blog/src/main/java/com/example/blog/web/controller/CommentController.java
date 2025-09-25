@@ -16,7 +16,7 @@ class CommentController {
     public CommentController(CommentService service){ this.service = service; }
 
     @GetMapping("/posts/{slug}/comments")
-    public List<Comment> listByPost(@PathVariable String slug){ return service.listByPostSlug(slug); }
+    public List<Comment> findByPostSlug(@PathVariable String slug){ return service.listByPostSlug(slug); }
 
     @PostMapping("/posts/{slug}/comments")
     @ResponseStatus(HttpStatus.CREATED)

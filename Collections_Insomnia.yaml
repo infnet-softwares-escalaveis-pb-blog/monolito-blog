@@ -1,0 +1,561 @@
+type: collection.insomnia.rest/5.0
+name: Infnet
+meta:
+  id: wrk_bc2a9481a4394ddc974a4b0d8abd72c3
+  created: 1756081082860
+  modified: 1756081082860
+  description: ""
+collection:
+  - name: TP01 - SpringBoot
+    meta:
+      id: fld_911ea5c2f7dd462f8b070519c95be06d
+      created: 1756081096261
+      modified: 1756081096261
+      sortKey: -1756081096261
+      description: ""
+  - name: TP02 - SpringBoot
+    meta:
+      id: fld_08fae9a33c9a4b04a3ce57e364aba800
+      created: 1756338135381
+      modified: 1756338135381
+      sortKey: -1756338135381
+      description: ""
+  - name: PB - Projeto Blog
+    meta:
+      id: fld_cd8c0b79073b4356908718a94ede643b
+      created: 1758759856382
+      modified: 1758766188057
+      sortKey: -1758759856382
+      description: ""
+    children:
+      - name: Author
+        meta:
+          id: fld_cda5a34f3577494997a3eeab12283ae8
+          created: 1758760599818
+          modified: 1758761046992
+          sortKey: -1758760602214
+          description: ""
+        children:
+          - url: http://localhost:8080/api/v1/authors
+            name: Author - List
+            meta:
+              id: req_ae5605a4c4544d068da86aa6421b9c45
+              created: 1758760604813
+              modified: 1758761044811
+              isPrivate: false
+              description: ""
+              sortKey: -1758760604813
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/11.6.1
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:8080/api/v1/authors/1
+            name: Author - Get
+            meta:
+              id: req_d98a9ce19be24604b167566852404b15
+              created: 1758760988049
+              modified: 1758761043492
+              isPrivate: false
+              description: ""
+              sortKey: -1758700216130
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/11.6.1
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:8080/api/v1/authors
+            name: Author - Create
+            meta:
+              id: req_effbee85bdbd4e20a106fe7fdf785fe7
+              created: 1758761040173
+              modified: 1758761214087
+              isPrivate: false
+              description: ""
+              sortKey: -1758670021788.5
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"name": "Alberto 2",
+                	"email": "betofrassoncb@gmail.com2",
+                	"bio": "Futuro Engenheiro de Software"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.6.1
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:8080/api/v1/authors/1
+            name: Author - Update
+            meta:
+              id: req_d84004abd6374977b64768839e74efd0
+              created: 1758761129417
+              modified: 1758761199858
+              isPrivate: false
+              description: ""
+              sortKey: -1758654924617.75
+            method: PUT
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"name": "Alberto Frasson",
+                	"email": "betofrassoncb@gmail.com",
+                	"bio": "Futuro Engenheiro de Software"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.6.1
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:8080/api/v1/authors/3
+            name: Author - Delete
+            meta:
+              id: req_02fbffbe106a411da5fc7c7a1bc2af8a
+              created: 1758761259364
+              modified: 1758761277227
+              isPrivate: false
+              description: ""
+              sortKey: -1758647376032.375
+            method: DELETE
+            body:
+              mimeType: application/json
+              text: ""
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.6.1
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+      - name: Category
+        meta:
+          id: fld_37a6518b154549648428f0ce5a1cfd52
+          created: 1758761292244
+          modified: 1758761312662
+          sortKey: -1758760229298
+          description: ""
+        children:
+          - url: http://localhost:8080/api/v1/categories
+            name: Category - List
+            meta:
+              id: req_ef62a38060e744bfa716e9f03d95897b
+              created: 1758761292248
+              modified: 1758761339815
+              isPrivate: false
+              description: ""
+              sortKey: -1758760604813
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/11.6.1
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:8080/api/v1/categories/1
+            name: Category - Get
+            meta:
+              id: req_aa708e6a379e49b8a0d143bc66f531d4
+              created: 1758761292252
+              modified: 1758761359258
+              isPrivate: false
+              description: ""
+              sortKey: -1758700216130
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/11.6.1
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:8080/api/v1/categories
+            name: Category - Create
+            meta:
+              id: req_e94fb0a67568480385c150168cc74f65
+              created: 1758761292255
+              modified: 1758761428312
+              isPrivate: false
+              description: ""
+              sortKey: -1758670021788.5
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"name": "Dicas de TI",
+                	"slug": "dicas-ti"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.6.1
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:8080/api/v1/categories/1
+            name: Category - Update
+            meta:
+              id: req_3fe85a9a1f8645368c3918f79d59b09a
+              created: 1758761292258
+              modified: 1758761451771
+              isPrivate: false
+              description: ""
+              sortKey: -1758654924617.75
+            method: PUT
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"name": "Dicas de TI",
+                	"slug": "dicas-ti-123"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.6.1
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:8080/api/v1/categories/1
+            name: Category - Delete
+            meta:
+              id: req_54fc90fde57b411aa2fc5971cbe74cda
+              created: 1758761292260
+              modified: 1758761463806
+              isPrivate: false
+              description: ""
+              sortKey: -1758647376032.375
+            method: DELETE
+            body:
+              mimeType: application/json
+              text: ""
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.6.1
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+      - name: Post
+        meta:
+          id: fld_e70fa74366f9482d9d6343a90063331f
+          created: 1758761504854
+          modified: 1758761504854
+          sortKey: -1758760042840
+          description: ""
+        children:
+          - url: http://localhost:8080/api/v1/posts
+            name: Post - List
+            meta:
+              id: req_e441d952e03844829a301dedd0b1ead1
+              created: 1758761504857
+              modified: 1758764702955
+              isPrivate: false
+              description: ""
+              sortKey: -1758760604813
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/11.6.1
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:8080/api/v1/posts/dica-de-git
+            name: Post - Get
+            meta:
+              id: req_1e5e9efc7e8043daac44a7aa50a625da
+              created: 1758761504859
+              modified: 1758764188739
+              isPrivate: false
+              description: ""
+              sortKey: -1758700216130
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/11.6.1
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:8080/api/v1/posts
+            name: Post - Create
+            meta:
+              id: req_eb5ac07e10c94db49d0b5dc0f2354491
+              created: 1758761504862
+              modified: 1758765069746
+              isPrivate: false
+              description: ""
+              sortKey: -1758670021788.5
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"title": "Dica de Git",
+                	"content": "Segue a diquinha ai",
+                	"authorId": 1,
+                	"categoryId": 1,
+                	"status": "PUBLISHED"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.6.1
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:8080/api/v1/posts/dica-de-git
+            name: Post - Update
+            meta:
+              id: req_866107df4cbb4563aeccdaef16b2c4f2
+              created: 1758761504865
+              modified: 1758764172914
+              isPrivate: false
+              description: ""
+              sortKey: -1758654924617.75
+            method: PUT
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"title": "Dica de Github",
+                	"content": "Segue a diquinha ai",
+                	"authorId": 1,
+                	"categoryId": 2,
+                	"status": "PUBLISHED"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.6.1
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:8080/api/v1/posts/dica-de-git
+            name: Post - Delete
+            meta:
+              id: req_a9f4920dae754024bc1e336392b03c86
+              created: 1758761504867
+              modified: 1758764199708
+              isPrivate: false
+              description: ""
+              sortKey: -1758647376032.375
+            method: DELETE
+            body:
+              mimeType: application/json
+              text: ""
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.6.1
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+      - name: Comment
+        meta:
+          id: fld_38b2458c9269414395b85d14c362ce13
+          created: 1758764526754
+          modified: 1758764526754
+          sortKey: -1758759949611
+          description: ""
+        children:
+          - url: http://localhost:8080/api/v1/posts/dica-de-git/comments
+            name: Comment - List
+            meta:
+              id: req_3a90b520523a4391b6397fa7b44ad213
+              created: 1758764526757
+              modified: 1758765300251
+              isPrivate: false
+              description: ""
+              sortKey: -1758760604813
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/11.6.1
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:8080/api/v1/posts/dica-de-git/comments
+            name: Comment - Create
+            meta:
+              id: req_1f194e8b716a472294d3812ece186451
+              created: 1758764526762
+              modified: 1758765979581
+              isPrivate: false
+              description: ""
+              sortKey: -1758670021788.5
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"authorName": "Alberto",
+                	"authorEmail": "betofrassoncb@gmail.com",
+                	"content": "Muito bom22"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.6.1
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:8080/api/v1/comments/4
+            name: Comment - Delete
+            meta:
+              id: req_975216f36b80473a90b2249299160473
+              created: 1758764526767
+              modified: 1758765964116
+              isPrivate: false
+              description: ""
+              sortKey: -1758647376032.375
+            method: DELETE
+            body:
+              mimeType: application/json
+              text: ""
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.6.1
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+    authentication:
+      type: basic
+      useISO88591: false
+      disabled: false
+      username: admin
+      password: "1234"
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_0648863eb8bfe4a0b30114ce318cf2934f296b97
+    created: 1756081082876
+    modified: 1758760638106
+  cookies:
+    - key: JSESSIONID
+      value: 2102F3590ED2A17F3D7E2C5C4B507123
+      domain: localhost
+      path: /
+      httpOnly: true
+      hostOnly: true
+      creation: 2025-09-20T22:12:00.148Z
+      lastAccessed: 2025-09-25T00:37:18.105Z
+      id: 77b2c28e-02c2-4a18-bac3-f3bf2c9380ab
+environments:
+  name: Base Environment
+  meta:
+    id: env_0648863eb8bfe4a0b30114ce318cf2934f296b97
+    created: 1756081082870
+    modified: 1756081082870
+    isPrivate: false

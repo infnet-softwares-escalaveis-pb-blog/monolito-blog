@@ -37,14 +37,12 @@ public class CategoryService {
 
     @Transactional
     public Category create(Category category){
-        // Se slug não vier, gerar a partir do nome
         if (category.getSlug() == null || category.getSlug().isBlank()) {
             category.setSlug(slugify(category.getName()));
         } else {
             category.setSlug(slugify(category.getSlug()));
         }
 
-        // Verifica unicidade do slug
         categoryRepo.findBySlug(category.getSlug()).ifPresent(c -> { throw new BusinessException("Slug de categoria já em uso"); });
         try {
             return categoryRepo.save(category);
@@ -57,12 +55,11 @@ public class CategoryService {
     public Category update(Long id, Category category){
         Category c = findById(id);
         c.setName(category.getName());
-        // Atualiza - normaliza slug
+
         String newSlug = category.getSlug();
         if (newSlug == null || newSlug.isBlank()) newSlug = slugify(category.getName());
         newSlug = slugify(newSlug);
 
-        // Garante que o slug não colida com outra categoria
         categoryRepo.findBySlug(newSlug).ifPresent(existing -> {
             if (!existing.getId().equals(c.getId())) {
                 throw new BusinessException("Slug de categoria já em uso");
